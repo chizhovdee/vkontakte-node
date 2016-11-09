@@ -1,0 +1,23 @@
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+*.log
+*-bin
+
+doc/
+*.swp
+*~
+
+# Ignore system files
+.DS_Store
+
+# Ignore IDE files
+*.sublime-project
+*.sublime-workspace
+.project
+.codeintel
+.idea
+
+/node_modules
+/build
+/dist

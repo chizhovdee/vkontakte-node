@@ -1,0 +1,30 @@
+{
+  "name": "vkontakte-node",
+  "version": "1.0.0",
+  "description": "Vkontakte integration",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Dmitry Chizhov",
+    "email": "chizhov.dee@gmail.com"
+  },
+  "repository": { 
+    "type": "git",
+    "url": "git@github.com:chizhovdee/vkontakte-node.git"
+  },
+  "homepage": "https://github.com/chizhovdee/vkontakte-node",
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.16.6",
+    "md5": "^2.2.1",
+    "request": "^2.78.0",
+    "request-promise": "^4.1.1",
+    "simple-encryptor": "^1.1.0"
+  }
+}
