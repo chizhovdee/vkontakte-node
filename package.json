@@ -10,10 +10,11 @@
     "name": "Dmitry Chizhov",
     "email": "chizhov.dee@gmail.com"
   },
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "git@github.com:chizhovdee/vkontakte-node.git"
   },
+  "private": true,
   "homepage": "https://github.com/chizhovdee/vkontakte-node",
   "readmeFilename": "README.md",
   "license": "MIT",
