@@ -9,13 +9,16 @@ class Api
 
   accessToken: null
 
+  @config: ->
+    config.default()
+
   @canvasPageUrl: (protocol)->
-    conf = config.default()
+    conf = @.config()
 
     "#{ protocol }www.vk.com/app#{ conf['appId'] }"
 
   @callbackUrl: (protocol)->
-    conf = config.default()
+    conf = @.config()
 
     protocol + conf['callbackDomain']
 
@@ -34,7 +37,7 @@ class Api
 
   # return Promise object
   @getAppAccessToken: ->
-    conf = config.default()
+    conf = @.config()
 
     options = {
       uri: Api.OAUTH_URL
@@ -50,6 +53,9 @@ class Api
     rp(options) # return Request object as Promise
 
   constructor: (@accessToken)->
+
+  config: ->
+    @constructor.config()
 
   # return Promise object
   call: (method, specificParams = {}, withAccessToken = true)->
@@ -70,7 +76,7 @@ class Api
       )
 
   signedCallParams: (method, specificParams = {})->
-    conf = config.default()
+    conf = @.config()
 
     params = _.clone(specificParams)
     params['v'] = conf['apiVersion'] if conf['apiVersion']?
